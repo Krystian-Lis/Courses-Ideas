@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>{{#block "title"}}Document{{/block}}</title>
+    <link rel="stylesheet" href="/css/output.css">
 </head>
 <body>
+    <div class="page">
+        {{#if flashMessage}}
+            <p id = "flash-message">{{ flashMessage }}</p>
+        {{/if}}
 {{/block}}
 
 {{#block "content"}}
@@ -13,6 +18,7 @@
 {{/block}}
 
 {{#block "footer"}}
-</body>
-</html>
+    </div>
+    </body>
+    </html>
 {{/block}}
